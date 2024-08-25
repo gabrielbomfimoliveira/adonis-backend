@@ -43,12 +43,18 @@ Certifique-se de ter os seguintes softwares instalados na sua máquina:
    PG_PASSWORD=sua_senha
    PG_DB_NAME=nome_do_banco
 
-4. **Execute as Migrations**
+4. **Gerando a APP_KEY**
+No terminal, execute o comando abaixo para gerar uma nova APP_KEY:
+   ```bash
+    adonis key:generate
+Isso vai gerar uma chave única e automaticamente adicionar ao arquivo .env.
+
+5. **Execute as Migrations**
    Para criar as tabelas no banco de dados, execute o comando:
    ```bash
    adonis migration:run
 
-5. **Inicie o Servidor**
+6. **Inicie o Servidor**
    Para iniciar o servidor AdonisJS em ambiente de desenvolvimento:
    ```bash
    adonis serve --dev
