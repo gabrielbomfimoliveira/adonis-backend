@@ -1,31 +1,55 @@
-# Adonis fullstack application
+# AdonisJS Backend
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+Este é o backend da aplicação, desenvolvido com AdonisJS e PostgreSQL para o banco de dados.
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+## Funcionalidades
 
-## Setup
+- **Autenticação**: Implementada com JWT.
+- **CRUD de Tarefas**: Endpoints para criar, ler, atualizar e deletar tarefas.
+- **Gerenciamento de Usuários**: Endpoints para criar, editar e deletar usuários.
+- **Validação de Dados**: Implementada em todos os endpoints.
+- **Migrations**: Configuração de banco de dados usando Lucid ORM.
 
-Use the adonis command to install the blueprint
+## Pré-requisitos
 
-```bash
-adonis new yardstick
-```
+Certifique-se de ter os seguintes softwares instalados na sua máquina:
 
-or manually clone the repo and then run `npm install`.
+- **Node.js** (versão LTS recomendada)
+- **Yarn** ou **npm** (gerenciador de pacotes)
+- **PostgreSQL** (para o banco de dados)
 
+## Configuração
 
-### Migrations
+1. **Clone o Repositório**
 
-Run the following command to run startup migrations.
+   ```bash
+   git clone https://github.com/gabrielbomfimoliveira/adonis-backend
+   cd adonis-backend
+   
+2. **Instale as Dependências**
+   ```bash
+   npm install
+   ou
+   yarn install
 
-```js
-adonis migration:run
-```
+3. **Configuração do Banco de Dados**
+   Crie um banco de dados PostgreSQL.
+   Renomeie o arquivo .env.example para .env e configure as variáveis de ambiente para o banco de dados:
+   ```bash
+   DB_CONNECTION=pg
+   PG_HOST=127.0.0.1
+   PG_PORT=5432
+   PG_USER=seu_usuario
+   PG_PASSWORD=sua_senha
+   PG_DB_NAME=nome_do_banco
+
+4. **Execute as Migrations**
+   Para criar as tabelas no banco de dados, execute o comando:
+   ```bash
+   adonis migration:run
+
+5. **Inicie o Servidor**
+   Para iniciar o servidor AdonisJS em ambiente de desenvolvimento:
+   ```bash
+   adonis serve --dev
+O servidor estará disponível em http://localhost:3333.
