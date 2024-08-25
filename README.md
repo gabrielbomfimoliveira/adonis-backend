@@ -53,3 +53,9 @@ Certifique-se de ter os seguintes softwares instalados na sua máquina:
    ```bash
    adonis serve --dev
 O servidor estará disponível em http://localhost:3333.
+
+**Melhorias Futuras**
+
+- Websockets para Atualização Constante: Implementar Websockets para garantir a atualização em tempo real dos dados na aplicação.
+- Tradução e Internacionalização (i18n): Adicionar suporte para múltiplos idiomas utilizando uma biblioteca de i18n.
+- Testes Automatizados: Implementar testes unitários e de integração para garantir a estabilidade do código.
