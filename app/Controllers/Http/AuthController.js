@@ -55,7 +55,7 @@ class AuthController {
     }
 
     if (password) {
-      user.password = await Hash.make(password);
+      user.password = password;
     }
 
     await user.save();
